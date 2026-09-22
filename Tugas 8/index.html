@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>FundFlow - Simulasi Keuangan Mahasiswa</title>
+
+    <!-- Icon Library -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar">
+      <a href="#home" class="logo-navbar">Fund<span>Flow</span></a>
+
+      <div class="navbar-nav">
+        <a href="#home">Beranda</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#goals">Goals</a>
+        <a href="#insight">Insight</a>
+        <a href="#profile">Profile</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a id="hamburger-menu" href="#"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- ============ NAVBAR END ============ -->
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Pegang Kendali Keuangan Mahasiswa Bersama FundFlow</h1>
+        <p>
+          Nikmati masa kuliah tanpa stres finansial. Atur anggaran, simulasi
+          tabungan, dan capai target impianmu secara realistis.
+        </p>
+        <a href="#simulasi" class="cta">Start Simulation</a>
+      </main>
+
+      <div class="hero-image">
+        <img src="assets/hero.svg" alt="Ilustrasi FundFlow" />
+      </div>
+    </section>
+    <!-- ============ HERO END ============ -->
+
+    <!-- ============ DASHBOARD SECTION ============ -->
+    <section class="dashboard" id="dashboard">
+      <h2>Dashboard Keuangan</h2>
+      <p>Pantau kondisi keuanganmu secara real-time dalam satu tampilan.</p>
+
+      <!-- Saldo Card -->
+      <div class="saldo-card">
+        <small>Saldo Saat Ini</small>
+        <h3 id="saldoAkhir">Rp 400.000,00</h3>
+      </div>
+
+      <!-- Ringkasan -->
+      <div class="ringkasan-grid">
+        <div class="ringkasan-card">
+          <span>Penghasilan</span>
+          <strong id="totalPemasukan">Rp 1.500.000,00</strong>
+        </div>
+        <div class="ringkasan-card">
+          <span>Pengeluaran</span>
+          <strong id="totalPengeluaran">Rp 1.100.000,00</strong>
+        </div>
+        <div class="ringkasan-card">
+          <span>Hemat</span>
+          <strong id="totalHemat">Rp 0,00</strong>
+        </div>
+      </div>
+
+      <!-- Chart & Gauge -->
+      <div class="chart-grid">
+        <div class="chart-card">
+          <h4>Grafik Pengeluaran</h4>
+          <canvas id="grafikPengeluaran"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h4>Status Keuangan</h4>
+          <div class="gauge">
+            <div class="gauge-bar">
+              <div class="gauge-fill" id="gaugeFill"></div>
+            </div>
+            <p id="statusKeuangan">Sehat</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Batas Anggaran -->
+      <div class="anggaran-section">
+        <h4>BATAS ANGGARAN HARIAN: <span id="batasHarian">TERSEDIA Rp0,00</span></h4>
+
+        <div class="kebutuhan">
+          <h5>Kebutuhan Bulanan</h5>
+          <div class="bar-item">
+            <label>Menyewa</label>
+            <div class="bar"><div class="bar-fill" style="width:80%"></div></div>
+            <span>Rp600.000,00</span>
+          </div>
+          <div class="bar-item">
+            <label>Bahan Makanan</label>
+            <div class="bar"><div class="bar-fill" style="width:60%"></div></div>
+            <span>Rp400.000,00</span>
+          </div>
+          <div class="bar-item">
+            <label>Kendaraan</label>
+            <div class="bar"><div class="bar-fill" style="width:40%"></div></div>
+            <span>Rp100.000,00</span>
+          </div>
+        </div>
+
+        <div class="keinginan">
+          <h5>Keinginan Pribadi</h5>
+          <div class="bar-item">
+            <label>Makan di luar</label>
+            <div class="bar"><div class="bar-fill" style="width:20%"></div></div>
+            <span>Rp0,00</span>
+          </div>
+          <div class="bar-item">
+            <label>Hiburan</label>
+            <div class="bar"><div class="bar-fill" style="width:10%"></div></div>
+            <span>Rp0,00</span>
+          </div>
+          <div class="bar-item">
+            <label>Cicilan</label>
+            <div class="bar"><div class="bar-fill" style="width:15%"></div></div>
+            <span>Rp0,00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============ DASHBOARD END ============ -->
+
+    <!-- ============ GOALS SECTION ============ -->
+    <section class="goals" id="goals">
+      <h2>Tujuan Keuangan</h2>
+      <p>Pilih dan capai tujuan finansialmu dengan simulasi yang realistis.</p>
+
+      <div class="row" id="goal-list"></div>
+    </section>
+    <!-- ============ GOALS END ============ -->
+
+    <!-- ============ INSIGHT SECTION ============ -->
+    <section class="insight" id="insight">
+      <h2>Insight Keuangan</h2>
+      <p>Analisis kebiasaan finansialmu dan dapatkan tips cerdas setiap hari.</p>
+
+      <div class="insight-grid">
+        <div class="insight-card">
+          <i data-feather="trending-up"></i>
+          <h4>Pengeluaran Terbesar</h4>
+          <p>Menyewa - Rp600.000,00</p>
+        </div>
+        <div class="insight-card">
+          <i data-feather="pie-chart"></i>
+          <h4>Rasio Tabungan</h4>
+          <p>26% dari penghasilan</p>
+        </div>
+        <div class="insight-card">
+          <i data-feather="alert-circle"></i>
+          <h4>Peringatan</h4>
+          <p>Pengeluaran mendekati batas bulanan</p>
+        </div>
+      </div>
+    </section>
+    <!-- ============ INSIGHT END ============ -->
+
+    <!-- ============ PROFILE SECTION ============ -->
+    <section class="profile" id="profile">
+      <h2>Profil Pengguna</h2>
+      <div class="row">
+        <div class="profile-img">
+          <img src="assets/abaout.svg" alt="Profile" />
+        </div>
+        <div class="content">
+          <h3>Halo, Mahasiswa Hebat!</h3>
+          <p>
+            FundFlow dirancang khusus untuk membantu mahasiswa mengelola
+            keuangan dengan lebih mudah, fleksibel, dan menyenangkan. Kami
+            menyediakan simulasi anggaran, pencatatan detail, serta target
+            keuangan yang bisa disesuaikan dengan kebutuhanmu.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ============ PROFILE END ============ -->
+
+    <!-- ============ FOOTER ============ -->
+    <footer id="footer">
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Beranda</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#goals">Goals</a>
+        <a href="#insight">Insight</a>
+        <a href="#profile">Profile</a>
+      </div>
+
+      <div class="credit">
+        <p>
+          Created by
+          <a href="#">Nama Mahasiswa | NIM | Kelas &copy;2026</a>
+        </p>
+      </div>
+    </footer>
+    <!-- ============ FOOTER END ============ -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

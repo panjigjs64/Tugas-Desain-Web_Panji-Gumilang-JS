@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none">
+  <!-- Background Blob -->
+  <ellipse cx="300" cy="280" rx="270" ry="200" fill="#E0F2FE"/>
+  <ellipse cx="330" cy="290" rx="190" ry="150" fill="#DBEAFE"/>
+
+  <!-- ===== Mahasiswa (Karakter) ===== -->
+  <!-- Badan -->
+  <path d="M 220 340 Q 220 260 290 260 Q 360 260 360 340 L 360 420 L 220 420 Z" fill="#3399FF"/>
+  <!-- Lengan kiri -->
+  <path d="M 220 300 Q 180 320 175 370 L 200 380 Q 205 340 230 320 Z" fill="#3399FF"/>
+  <!-- Lengan kanan -->
+  <path d="M 360 300 Q 400 320 405 370 L 380 380 Q 375 340 350 320 Z" fill="#3399FF"/>
+  <!-- Tangan kiri (skin) -->
+  <circle cx="180" cy="378" r="15" fill="#FBBF8F"/>
+  <!-- Tangan kanan (skin) -->
+  <circle cx="400" cy="378" r="15" fill="#FBBF8F"/>
+  <!-- Kepala -->
+  <circle cx="290" cy="220" r="50" fill="#FBBF8F"/>
+  <!-- Rambut -->
+  <path d="M 245 210 Q 245 165 290 165 Q 335 165 335 210 Q 335 190 290 185 Q 245 190 245 210 Z" fill="#334155"/>
+  <path d="M 240 205 Q 240 185 260 180 L 260 200 Z" fill="#334155"/>
+  <path d="M 340 205 Q 340 185 320 180 L 320 200 Z" fill="#334155"/>
+  <!-- Mata -->
+  <circle cx="275" cy="220" r="4" fill="#334155"/>
+  <circle cx="305" cy="220" r="4" fill="#334155"/>
+  <!-- Senyum -->
+  <path d="M 278 238 Q 290 248 302 238" stroke="#334155" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Kacamata (optional, biar kelihatan mahasiswa) -->
+  <circle cx="275" cy="220" r="12" stroke="#334155" stroke-width="2" fill="none"/>
+  <circle cx="305" cy="220" r="12" stroke="#334155" stroke-width="2" fill="none"/>
+  <line x1="287" y1="220" x2="293" y2="220" stroke="#334155" stroke-width="2"/>
+
+  <!-- ===== Laptop di Meja ===== -->
+  <rect x="150" y="420" width="300" height="15" rx="5" fill="#334155"/>
+  <rect x="270" y="380" width="180" height="45" rx="5" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+  <rect x="280" y="390" width="160" height="25" rx="2" fill="#3399FF" opacity="0.3"/>
+  <text x="360" y="408" font-family="Poppins, sans-serif" font-size="10" font-weight="600" fill="#3399FF" text-anchor="middle">FundFlow</text>
+
+  <!-- ===== Floating Elements ===== -->
+  <!-- Chart card kiri atas -->
+  <rect x="60" y="120" width="120" height="90" rx="10" fill="#FFFFFF" stroke="#D9D9D9" stroke-width="2"/>
+  <text x="75" y="142" font-family="Poppins, sans-serif" font-size="9" font-weight="600" fill="#334155">Pengeluaran</text>
+  <rect x="75" y="155" width="15" height="30" rx="2" fill="#3399FF"/>
+  <rect x="98" y="165" width="15" height="20" rx="2" fill="#33CC66"/>
+  <rect x="121" y="150" width="15" height="35" rx="2" fill="#E95252"/>
+  <rect x="144" y="160" width="15" height="25" rx="2" fill="#2563EB"/>
+
+  <!-- Coin kanan atas -->
+  <circle cx="500" cy="130" r="30" fill="#33CC66"/>
+  <circle cx="500" cy="130" r="22" fill="#FFFFFF" opacity="0.3"/>
+  <text x="500" y="140" font-family="Poppins, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">$</text>
+
+  <!-- Goal target kanan bawah -->
+  <circle cx="510" cy="330" r="35" fill="#FFFFFF" stroke="#3399FF" stroke-width="3"/>
+  <circle cx="510" cy="330" r="24" fill="#FFFFFF" stroke="#3399FF" stroke-width="2"/>
+  <circle cx="510" cy="330" r="12" fill="#FFFFFF" stroke="#3399FF" stroke-width="2"/>
+  <circle cx="510" cy="330" r="5" fill="#E95252"/>
+
+  <!-- Check mark kiri bawah -->
+  <circle cx="90" cy="360" r="28" fill="#33CC66"/>
+  <path d="M 78 360 L 86 368 L 102 350" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Small dots decoration -->
+  <circle cx="150" cy="80" r="4" fill="#3399FF"/>
+  <circle cx="450" cy="90" r="5" fill="#33CC66"/>
+  <circle cx="80" cy="250" r="4" fill="#E95252"/>
+  <circle cx="540" cy="220" r="5" fill="#3399FF"/>
+</svg>

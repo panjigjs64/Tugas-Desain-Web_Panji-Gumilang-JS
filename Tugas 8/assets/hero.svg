@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none">
+  <!-- Background Blob -->
+  <ellipse cx="300" cy="260" rx="260" ry="230" fill="#E0F2FE"/>
+  <ellipse cx="320" cy="270" rx="180" ry="160" fill="#DBEAFE"/>
+
+  <!-- ===== Main Dashboard Card ===== -->
+  <rect x="150" y="80" width="300" height="340" rx="20" fill="#FFFFFF" stroke="#D9D9D9" stroke-width="2"/>
+
+  <!-- Header Dashboard -->
+  <rect x="150" y="80" width="300" height="55" rx="20" fill="#3399FF"/>
+  <rect x="150" y="115" width="300" height="20" fill="#3399FF"/>
+  <circle cx="175" cy="107" r="6" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="195" cy="107" r="6" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="215" cy="107" r="6" fill="#FFFFFF" opacity="0.7"/>
+  <text x="300" y="113" font-family="Poppins, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">FundFlow Dashboard</text>
+
+  <!-- Saldo Card -->
+  <rect x="170" y="155" width="260" height="60" rx="12" fill="url(#gradSaldo)"/>
+  <text x="185" y="178" font-family="Poppins, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.9">Saldo Saat Ini</text>
+  <text x="185" y="200" font-family="Poppins, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Rp 400.000,00</text>
+
+  <!-- Stat Cards -->
+  <rect x="170" y="230" width="80" height="55" rx="10" fill="#F0FDF4" stroke="#33CC66" stroke-width="1.5"/>
+  <text x="210" y="250" font-family="Poppins, sans-serif" font-size="9" fill="#334155" text-anchor="middle">Penghasilan</text>
+  <text x="210" y="272" font-family="Poppins, sans-serif" font-size="11" font-weight="700" fill="#33CC66" text-anchor="middle">Rp 1.5jt</text>
+
+  <rect x="260" y="230" width="80" height="55" rx="10" fill="#FEF2F2" stroke="#E95252" stroke-width="1.5"/>
+  <text x="300" y="250" font-family="Poppins, sans-serif" font-size="9" fill="#334155" text-anchor="middle">Pengeluaran</text>
+  <text x="300" y="272" font-family="Poppins, sans-serif" font-size="11" font-weight="700" fill="#E95252" text-anchor="middle">Rp 1.1jt</text>
+
+  <rect x="350" y="230" width="80" height="55" rx="10" fill="#EFF6FF" stroke="#3399FF" stroke-width="1.5"/>
+  <text x="390" y="250" font-family="Poppins, sans-serif" font-size="9" fill="#334155" text-anchor="middle">Hemat</text>
+  <text x="390" y="272" font-family="Poppins, sans-serif" font-size="11" font-weight="700" fill="#3399FF" text-anchor="middle">Rp 400rb</text>
+
+  <!-- Mini Chart -->
+  <rect x="170" y="300" width="260" height="100" rx="10" fill="#F8FAFC" stroke="#D9D9D9" stroke-width="1"/>
+  <text x="185" y="320" font-family="Poppins, sans-serif" font-size="10" font-weight="600" fill="#334155">Grafik Pengeluaran</text>
+
+  <!-- Bar Chart -->
+  <rect x="190" y="370" width="25" height="20" rx="3" fill="#3399FF"/>
+  <rect x="230" y="345" width="25" height="45" rx="3" fill="#2563EB"/>
+  <rect x="270" y="355" width="25" height="35" rx="3" fill="#3399FF"/>
+  <rect x="310" y="330" width="25" height="60" rx="3" fill="#33CC66"/>
+  <rect x="350" y="360" width="25" height="30" rx="3" fill="#3399FF"/>
+  <rect x="390" y="350" width="25" height="40" rx="3" fill="#2563EB"/>
+
+  <!-- ===== Floating Cards (kanan kiri) ===== -->
+  <!-- Coin / Money Icon -->
+  <circle cx="120" cy="140" r="35" fill="#33CC66"/>
+  <circle cx="120" cy="140" r="28" fill="#FFFFFF" opacity="0.3"/>
+  <text x="120" y="150" font-family="Poppins, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">$</text>
+
+  <!-- Wallet Icon -->
+  <rect x="460" y="200" width="80" height="60" rx="10" fill="#3399FF"/>
+  <rect x="460" y="215" width="80" height="15" fill="#2563EB"/>
+  <rect x="520" y="225" width="20" height="15" rx="3" fill="#FFFFFF"/>
+
+  <!-- Goal / Target -->
+  <circle cx="490" cy="360" r="30" fill="#FFFFFF" stroke="#3399FF" stroke-width="3"/>
+  <circle cx="490" cy="360" r="20" fill="#FFFFFF" stroke="#3399FF" stroke-width="2"/>
+  <circle cx="490" cy="360" r="8" fill="#E95252"/>
+
+  <!-- Arrow up (growth) -->
+  <path d="M 100 380 L 130 340 L 115 340 L 115 330 L 145 330 L 145 360 L 135 360 L 135 350 Z" fill="#33CC66"/>
+
+  <!-- Gradient Defs -->
+  <defs>
+    <linearGradient id="gradSaldo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3399FF"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,701 @@
+:root {
+  /* ===== COLOR PALETTE FUNDFLOW ===== */
+  --primary: #3399ff;        /* Blue - aksen utama */
+  --primary-dark: #2563eb;   /* Dark Blue - hover */
+  --success: #33cc66;        /* Green - pemasukan/sehat */
+  --danger: #e95252;         /* Red - pengeluaran/warning */
+  --dark-navy: #334155;      /* Card, border, teks sekunder */
+  --off-white: #f8fafc;      /* Background utama */
+  --light-gray: #d9d9d9;     /* Border, divider */
+  --black: #000000;          /* Text utama */
+
+  /* ===== SEMANTIC COLORS ===== */
+  --bg-color: var(--off-white);
+  --text-color: var(--black);
+  --text-muted: var(--dark-navy);
+  --card-bg: #ffffff;
+  --border-color: var(--light-gray);
+  --primary-color: var(--primary);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* ============ NAVBAR ============ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(248, 250, 252, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar .logo-navbar {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.navbar .logo-navbar span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: var(--dark-navy);
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0.9rem;
+  transition: 0.3s;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-extra a {
+  color: var(--dark-navy);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* ============ HERO ============ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 7% 2rem;
+  gap: 3rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+}
+
+.hero .content {
+  flex: 1;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 3.5em;
+  line-height: 1.2;
+  color: var(--dark-navy);
+  font-weight: 700;
+}
+
+.hero .content p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--dark-navy);
+  opacity: 0.85;
+}
+
+.hero .content .cta {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(51, 153, 255, 0.4);
+  transition: 0.3s;
+}
+
+.hero .content .cta:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5);
+}
+
+.hero .hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ============ SECTION UMUM ============ */
+.dashboard,
+.goals,
+.insight,
+.profile {
+  padding: 6rem 7% 2rem;
+  background-color: var(--bg-color);
+}
+
+.dashboard h2,
+.goals h2,
+.insight h2,
+.profile h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.dashboard > p,
+.goals > p,
+.insight > p {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 3rem;
+  font-weight: 400;
+  color: var(--dark-navy);
+  opacity: 0.8;
+}
+
+/* ============ SALDO ============ */
+.saldo-card {
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(51, 153, 255, 0.3);
+  color: white;
+}
+
+.saldo-card small {
+  display: block;
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.saldo-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ============ RINGKASAN ============ */
+.ringkasan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 60rem;
+  margin: 0 auto 3rem;
+}
+
+.ringkasan-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 2px 8px rgba(51, 65, 85, 0.05);
+}
+
+.ringkasan-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(51, 153, 255, 0.15);
+}
+
+.ringkasan-card span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--dark-navy);
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.ringkasan-card strong {
+  font-size: 1.3rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Warna khusus untuk Pengeluaran (Danger) */
+.ringkasan-card:nth-child(2) strong {
+  color: var(--danger);
+}
+
+/* Warna khusus untuk Hemat (Success) */
+.ringkasan-card:nth-child(3) strong {
+  color: var(--success);
+}
+
+/* ============ CHART ============ */
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 60rem;
+  margin: 0 auto 3rem;
+}
+
+.chart-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 8px rgba(51, 65, 85, 0.05);
+}
+
+.chart-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--dark-navy);
+  font-weight: 600;
+}
+
+.chart-card canvas {
+  width: 100% !important;
+  height: 200px !important;
+}
+
+/* ============ GAUGE ============ */
+.gauge {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.gauge-bar {
+  width: 100%;
+  height: 20px;
+  background: var(--light-gray);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.gauge-fill {
+  height: 100%;
+  width: 60%;
+  background: linear-gradient(90deg, var(--danger), #f39c12, var(--success));
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+#statusKeuangan {
+  font-size: 1.2rem;
+  color: var(--success);
+  font-weight: 700;
+}
+
+/* ============ ANGGARAN ============ */
+.anggaran-section {
+  max-width: 60rem;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.8rem;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(51, 65, 85, 0.05);
+}
+
+.anggaran-section h4 {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--dark-navy);
+  font-weight: 600;
+}
+
+.anggaran-section h4 span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.kebutuhan,
+.keinginan {
+  margin-bottom: 2rem;
+}
+
+.kebutuhan h5,
+.keinginan h5 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--dark-navy);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.bar-item {
+  display: grid;
+  grid-template-columns: 150px 1fr 120px;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.bar-item label {
+  font-size: 0.9rem;
+  color: var(--dark-navy);
+  font-weight: 500;
+}
+
+.bar {
+  height: 12px;
+  background: var(--light-gray);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--success));
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.bar-item span {
+  font-size: 0.85rem;
+  text-align: right;
+  color: var(--dark-navy);
+  font-weight: 600;
+}
+
+/* ============ GOALS ============ */
+.goals {
+  background-color: var(--off-white);
+}
+
+.goals .row {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.goal-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(51, 65, 85, 0.05);
+}
+
+.goal-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 15px 30px rgba(51, 153, 255, 0.2);
+}
+
+.goal-card .icon {
+  font-size: 3rem;
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #e0f2fe, #f0fdf4);
+}
+
+.goal-card-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.goal-card-content span {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.goal-card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-navy);
+  font-weight: 700;
+}
+
+.goal-card-content p {
+  font-size: 0.9rem;
+  color: var(--dark-navy);
+  opacity: 0.75;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.goal-card-content small {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--dark-navy);
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+.goal-card-content strong {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--success);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.goal-card-content a {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.goal-card-content a:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+/* ============ INSIGHT ============ */
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.insight-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 2rem 1.5rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 2px 8px rgba(51, 65, 85, 0.05);
+}
+
+.insight-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(51, 153, 255, 0.15);
+}
+
+.insight-card i {
+  color: var(--primary);
+  width: 32px;
+  height: 32px;
+  margin-bottom: 1rem;
+}
+
+.insight-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-navy);
+  font-weight: 700;
+}
+
+.insight-card p {
+  font-size: 0.9rem;
+  color: var(--dark-navy);
+  opacity: 0.75;
+  font-weight: 500;
+}
+
+/* ============ PROFILE ============ */
+.profile {
+  background-color: var(--bg-color);
+}
+
+.profile .row {
+  display: flex;
+  max-width: 70rem;
+  margin: 0 auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile .profile-img {
+  flex: 1 1 45%;
+}
+
+.profile .profile-img img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(51, 65, 85, 0.15);
+}
+
+.profile .content {
+  flex: 1 1 55%;
+}
+
+.profile .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.profile .content p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--dark-navy);
+  opacity: 0.85;
+}
+
+/* ============ FOOTER ============ */
+footer {
+  background-color: var(--dark-navy);
+  text-align: center;
+  padding: 2rem 0 3rem;
+  margin-top: 5rem;
+  color: white;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: white;
+  margin: 1rem;
+  transition: 0.3s;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--primary);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: white;
+  padding: 0.7rem 1rem;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+footer .credit {
+  font-size: 0.85rem;
+  color: var(--light-gray);
+}
+
+footer .credit a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1366px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--off-white);
+    width: 25rem;
+    height: 100vh;
+    transition: 0.3s ease;
+    flex-direction: column;
+    border-left: 1px solid var(--border-color);
+    box-shadow: -5px 0 20px rgba(51, 65, 85, 0.1);
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--dark-navy);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 10rem 7% 3rem;
+  }
+
+  .ringkasan-grid,
+  .chart-grid,
+  .insight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .goals .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile .row {
+    flex-wrap: wrap;
+  }
+
+  .bar-item {
+    grid-template-columns: 100px 1fr 100px;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 60%;
+  }
+
+  .goals .row {
+    grid-template-columns: 1fr;
+  }
+}
